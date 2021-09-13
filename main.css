@@ -1,11 +1,11 @@
 body{
-    background-color: lightgray;
+    /* background-color: lightgray; */
     margin: 0;
 }
 h1, h2, h3, h4{
     font-family: 'Frank Ruhl Libre', serif;
 }
-p{
+p, nav a{
     font-family: 'Fira Sans', sans-serif;
 }
 
@@ -129,7 +129,7 @@ main section:first-of-type{
     align-items: flex-start;
 }
 
-main section:first-of-type h1{
+.info-section h1{
     font-size: 44px;
     color: white;
     margin: 2rem 0 2rem 1rem;
@@ -142,27 +142,27 @@ main section:first-of-type h1{
     margin: 0 1rem 2rem 1rem;
 }
 
-.info-cards{
+.info-card{
     background-color: white;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    width: 60%;
+    max-width: 14.1rem;
     margin: 3rem 0 0 5rem;
     border-radius: .5rem;
 }
-.info-cards:last-of-type{
+.info-card:last-of-type{
     margin-bottom: 5rem;
 
 }
 
-.info-cards aside{
+.info-card aside{
     margin: auto;
-    width: 90%;
+    width: 12.7rem;
 }
 
-.info-cards aside{
+.info-card aside{
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -193,7 +193,7 @@ main section:first-of-type h1{
 
 
 
-.info-cards p{
+.info-card p{
     font-size: 0.8rem;
     font-weight: 600;
     line-height: 1.6;
@@ -201,27 +201,27 @@ main section:first-of-type h1{
     text-align: center;
     margin: 1rem 1rem 2rem 1rem;
 }
-.info-cards h3{
+.info-card h3{
    font-size: 20px;
    margin: 1rem 0 0 0;
 }
-.info-cards > aside img{
+.info-card > aside img{
     margin-top: 1rem;
 }
 
-.info-cards > aside img[src="img/adult.png"]{
-    height: 40%;
-    width: 40%;
+.info-card > aside img[src="img/adult.png"]{
+    height: 7.4rem;
+    width: 5.1rem;
     
 }
-.info-cards > aside img[src="img/old.png"]{
-    height: 55%;
-    width: 55%;
+.info-card > aside img[src="img/old.png"]{
+    height: 7rem;
+    width: 6.9rem;
     
 }
-.info-cards > aside img[src="img/child.png"]{
-    height: 40%;
-    width: 40%;
+.info-card > aside img[src="img/child.png"]{
+    height: 7.9rem;
+    width: 5.1rem;
    
 }
 main section:last-of-type{
@@ -308,5 +308,165 @@ footer a{
     border-radius: 50%;
 }
 
-
+/*  */
+/*  */
 /* Skriver media query över till exempel grid eller flex */
+
+@media screen and (min-width: 1200px) {
+    .wrapper{
+        min-width: 1200px;
+        max-width: 1920px;
+    }
+
+    header{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 
+        "covered learn-more"
+        "covered join-today";
+
+    }
+
+    .covered{
+        grid-area: covered;
+        display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    
+    }
+
+    .covered h1{
+        margin: 5rem 6rem 0 8rem;
+        font-size: 60px;
+        font-weight: bold;
+    }
+    .covered p:first-of-type{
+        margin: 1rem 10em 0 8rem;
+        font-size: 1.1rem;
+
+    }
+    .covered p:last-of-type{
+        top: -1.77rem;
+        left: 20.2rem;
+        font-size: 1.1rem;
+    }
+    .covered button{
+        /* margin: 3rem 4rem 0 8rem; */
+        position: relative;
+        left: 7rem;
+        top: 5rem;
+        width: 12rem;
+        font-size: 1rem;
+    }
+    .covered img{
+        width: 60%;
+        height: 60%;
+        align-self: flex-end;
+       margin: 0 1rem 0 0;
+        
+    }
+    .learn-more{
+        grid-area: learn-more;
+        justify-content: center;
+    }
+    .learn-more h2{
+        font-size: 46px;
+    }
+    .learn-more p{
+        font-size: 1rem;
+    }
+    .join-today{
+        grid-area: join-today;
+        justify-content: center;
+    }
+    .join-today h2{
+        font-size: 46px;
+    }
+    .join-today p{
+        font-size: 1rem;
+    }
+    nav{
+        display: flex;
+        justify-content: center;
+    }
+
+    nav a{
+        margin: 2rem 8rem;
+        text-decoration: none;
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: #8d8d8d;
+        transition: color .5s;
+    }
+    nav a:hover{
+        color: black;
+    }
+
+    .info-section{
+        height: 30rem;
+        width: 80rem;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: flex-end;
+        margin-top: 8rem;
+        
+    }
+    .info-section h1{
+        width: 27rem;
+        height: 12rem;
+        margin: 0 0 0 0;
+        font-size: 60px;
+    }
+    
+    .info-section p{
+        width: 25rem;
+        height: 26rem;
+        font-size: 1.2rem;
+        margin: 0;
+    }
+
+
+    .info-section button{
+        margin: 2rem 15rem 0 0;
+        font-family: 'Fira Sans', sans-serif;
+        font-size: .85rem;
+        font-weight:600;    
+        width: 12rem;
+        height: 3rem;
+        border-radius: 2rem;
+        border-style: none;
+        box-shadow: 0 3px 1px #696462;
+    }
+
+ 
+    
+    .info-card{
+        max-width: 18rem;
+        height: 25rem;
+        margin: 0;
+    }
+    .info-cards{
+        display: flex;
+        justify-content: space-around;
+        align-self: center;
+        max-width: 120rem;
+        min-width: 62rem;
+        height: 410px;
+        margin: 0;
+    }
+    main section:first-of-type button{
+        display: block;
+    }
+
+    .info-card > aside img[src="img/adult.png"]{
+        
+    }
+    .info-card > aside img[src="img/old.png"]{
+        margin-top: 23px;
+    }
+    .info-card > aside img[src="img/child.png"]{
+       margin-top: .5rem;
+    }
+}
