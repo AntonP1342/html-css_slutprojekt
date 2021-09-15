@@ -1,5 +1,8 @@
+html{
+    scroll-behavior: smooth;
+}
 body{
-    /* background-color: lightgray; */
+    background-color: lightgray; 
     margin: 0;
 }
 h1, h2, h3, h4{
@@ -34,22 +37,15 @@ p, nav a{
     line-height: 1;
 }
 
-.covered p:first-of-type{
+.covered p{
     margin: 0 1rem;
     font-size: 0.9rem;
     font-weight:600;
     line-height: 1.6;
     color: #50585e;
 }
-.covered p:last-of-type{
-    margin: 0 1rem;
-    font-size: 0.9rem;
-    font-weight:600;
-    line-height: 1.6;
+.price{
     color: white;
-    position: relative;
-    top: -1.42rem;
-    left: 14.7rem;
 }
 
 .covered button{
@@ -118,6 +114,7 @@ nav{
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
+  background-color: white;
 }
 
 nav a{
@@ -167,9 +164,10 @@ nav p{
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    max-width: 14.1rem;
-    margin: 3rem 0 0 5rem;
+    width: 17.5rem;
+    margin: 3rem 0 0 3rem; 
     border-radius: .5rem;
+    box-shadow: 0px 5px 8px 0px rgba(119, 119, 119, 0.75);
 }
 .info-card:last-of-type{
     margin-bottom: 5rem;
@@ -208,8 +206,6 @@ nav p{
   
 
 }
-
-
 
 
 .info-card p{
@@ -260,12 +256,19 @@ nav p{
     font-size: 0.9rem;
     font-weight: 600;
     line-height: 1.6;
-    color: #433e3d;
+    color: #644714;
     margin: 0 3rem 2rem 3rem;
     text-align: center;
 }
 .main_home section:last-of-type p:last-of-type{
     margin-bottom: 4rem;
+}
+.instruction-steps{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 157px; 
 }
 .instruction-steps:first-of-type{
     background-color: #c7ddea;
@@ -275,25 +278,14 @@ nav p{
     text-align: center;
     font-size: 1rem;
     font-weight: 600;
-    margin: 0rem 3rem 4rem 3rem;
+    
+    margin: 0 5rem 4rem 5rem;
 }
-.wrapper section .instruction-steps:nth-child(5){
-    background-color: #f17949;
-}
-.wrapper section .instruction-steps:nth-child(3){
-    background-color: rgb(230, 230, 230);
-}
-.wrapper section .instruction-steps:nth-child(2n){
-    background-color: white;
-}
-.instruction-steps{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-height: 157px;
+.instruction-steps:nth-child(3) p:first-of-type{
+    margin: 0 5rem;
 }
 .instruction-steps h4{
-    margin: 1rem auto 0rem 1rem;
+    margin: 1rem auto 2rem 1rem;
     font-size: 30px;
     opacity: 0.5;
 }
@@ -306,6 +298,19 @@ nav p{
 }
 .instruction-steps h2{
     margin: 0rem 2rem 2rem 2rem;
+}
+
+
+
+
+.wrapper section .instruction-steps:nth-child(5){
+    background-color: #f17949;
+}
+.wrapper section .instruction-steps:nth-child(3){
+    background-color: rgb(230, 230, 230);
+}
+.wrapper section .instruction-steps:nth-child(2n){
+    background-color: white;
 }
 .footer_home p{
     display: none;
@@ -335,6 +340,7 @@ nav p{
     display: flex;
     justify-content: flex-start;
     height: 20rem;
+    position: relative;
 }
 
 .header_contact h1{
@@ -389,7 +395,7 @@ form button{
     align-self: flex-end;
     margin: 2rem 2rem 8rem 2rem;
     font-family: 'Fira Sans', sans-serif;
-    font-size: .7rem;
+    font-size: .6rem;
     font-weight:600;    
     width: 8rem;
     height: 2rem;
@@ -409,32 +415,51 @@ form button{
     position: relative;
 }
 
-.footer_contact img[src="img/map.png"]{
+.footer_contact img[src="img/map-mobile.png"]{
     object-fit: cover;
     position: absolute;
-    width: 410px;
-    height: 30rem;
+    width: 375px;
+    height: 407px;
     z-index: -1;
     
 }
-.footer_contact article section{
+.footer_contact img[src="img/map.png"]{
+    display: none;
+}
+.visit-us{
     background-color: #fab131;
     width: 320px;
-    height: 200px;
+    height: 180px;
     color: white;
     position: absolute;
-    top: 62rem;
+    top: 63rem;
     z-index: 3;
     
 }
 
-.footer_contact section h1{
+.wrapper_footer_img{
+    height: 407px;
+}
+
+.wrapper_footer_img :not(img[src="img/map.png"]):not(img[src="img/map-mobile.png"]){
+    display: flex;
+   margin: auto;
+   
+  
+}
+.location{
+    padding-top: 204px;
+    height:59px; 
+    width:37px;
+}
+
+.visit-us h1{
     font-size: 38px;
-    margin: 1rem 0 1rem 1rem;
+    margin: 1rem 0 0 1rem;
     
 }
 
-.footer_contact section p{
+.visit-us p{
     margin: 0 0 0 1rem;
 }
 
@@ -445,11 +470,26 @@ form button{
     align-items: center;
     height: 30rem;
 }
+
+.arrow-icon_mobile_contact{
+    position: relative;
+    left: 265px;
+    bottom: 25px;
+    width: 60px;
+    height: 60px;
+    background-color: #ace0f3;
+    border-radius: 50%;
+}
+
+
 /*  */
 /*  */
 /* Skriver media query över till exempel grid eller flex */
 
 @media screen and (min-width: 1200px) {
+    body{
+        background-color:white ;
+    }
     .wrapper{
         min-width: 1200px;
         max-width: 1920px;
@@ -474,28 +514,31 @@ form button{
     }
 
     .covered h1{
-        margin: 5rem 6rem 0 8rem;
-        font-size: 60px;
-        font-weight: bold;
+        margin: 7rem 6rem 0 14rem;
+        width: 30rem;
+        font-size: 72px;
+        font-weight: bolder;
     }
-    .covered p:first-of-type{
-        margin: 1rem 10em 0 8rem;
-        font-size: 1.1rem;
+    .covered p{
+        width: 30rem;
+        margin: 1rem 10em 0 14rem;
+        font-size: 1.7rem;
 
     }
-    .covered p:last-of-type{
-        top: -1.77rem;
-        left: 20.2rem;
-        font-size: 1.1rem;
-    }
     .covered button{
-        /* margin: 3rem 4rem 0 8rem; */
         position: relative;
-        left: 7rem;
-        top: 5rem;
-        width: 12rem;
+        left: 13rem;
+        top: 8rem;
+        width: 14rem;
+        height: 4.5rem;
         font-size: 1rem;
+        transition: background-color 1s, color 0.3s;
     }
+    .covered button:hover{
+        background-color: rgb(175, 175, 175);
+        color: rgb(255, 255, 255);
+    }
+
     .covered img{
         width: 60%;
         height: 60%;
@@ -545,47 +588,55 @@ form button{
 
     .info-section{
         height: 30rem;
-        width: 80rem;
+        width: 70rem;
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
         align-items: flex-end;
-        margin-top: 8rem;
+        margin: 8rem 0 0 25rem;
         
     }
     .info-section h1{
-        width: 27rem;
-        height: 12rem;
+        width: 32rem;
+        height: 20rem;
         margin: 0 0 0 0;
-        font-size: 60px;
+        font-size: 72px;
+        align-self: flex-start;
     }
     
     .info-section p{
-        width: 25rem;
-        height: 26rem;
-        font-size: 1.2rem;
+        width: 30rem;
+        height: 29rem;
+        font-size: 1.5rem;
         margin: 0;
     }
 
 
     .info-section button{
-        margin: 2rem 15rem 0 0;
+        margin: 2rem 0 0 0;
+        align-self: flex-start;
         font-family: 'Fira Sans', sans-serif;
-        font-size: .85rem;
+        font-size: 1rem;
         font-weight:600;    
-        width: 12rem;
-        height: 3rem;
+        width: 13rem;
+        height: 4rem;
         border-radius: 2rem;
         border-style: none;
         box-shadow: 0 3px 1px #696462;
+        transition: background-color 1s, color 0.3s;
     }
 
- 
+    .info-section button:hover{
+        background-color: #5f5f5f;
+        color: rgb(255, 255, 255);
+    }
     
     .info-card{
         max-width: 18rem;
-        height: 25rem;
+        height: 22rem;
         margin: 0;
+        position: relative;
+        justify-content: flex-end;
     }
     .info-cards{
         display: flex;
@@ -595,9 +646,21 @@ form button{
         min-width: 62rem;
         height: 410px;
         margin: 0;
+        position: relative;
+        top: 12rem;
     }
     .main_home section:first-of-type button{
         display: block;
+    }
+
+    .info-card aside{
+        width: 16.25rem;
+        height: 10.6rem;
+        position: absolute;
+        top: -2rem;
+    }
+    .info-card h3{
+        margin: 0;
     }
 
     .info-card > aside img[src="img/adult.png"]{
@@ -610,14 +673,19 @@ form button{
        margin-top: .5rem;
     }
     .main_home section:last-of-type{
-        height: 50rem;
+        height: 70rem;
         justify-content: center;
     }
     .main_home section:last-of-type p{
-        margin: 0 22rem 1rem 22rem;
+       width: 50rem;
+       font-size: 1.5rem;
+    }
+    .main_home section:last-of-type p:last-of-type{
+        margin-bottom: 14rem;
     }
     .main_home section:last-of-type h1{
-        font-size: 60px;
+        font-size: 72px;
+        margin-top: 14rem;
     }
     section{
         display: grid;
@@ -626,7 +694,36 @@ form button{
     }
     .instruction-steps{
         height: 20rem;
+        display: block;
+    }
+    .instruction-steps :not(h4){
+        display: flex;
+        flex-direction: column;
         justify-content: center;
+        align-items: center;
+        
+    }
+    .instruction-steps p{
+        font-size: 1.3rem;
+        margin: 5rem 12rem 0 12rem;
+    }
+    .instruction-steps:nth-child(3) p:first-of-type{
+        font-size: 1.3rem;
+        margin-top: 5rem;
+    }
+    .instruction-steps:nth-child(3) p:last-of-type{
+        font-size: 1.3rem;
+        margin: 0;
+    }
+    .instruction-steps:nth-child(4) p{
+        font-size: 1.3rem;
+        margin: 5rem 10rem 0 10rem;
+    }
+    .instruction-steps h1{
+       margin-top: 8rem;
+    }
+    .instruction-steps h4{
+       font-size: 38px;
     }
     .footer_home p{
         display: block;
@@ -660,53 +757,96 @@ form button{
         width: 2.5rem;
         height: 2.5rem;
     }
-
-    .header_contact img{
-        position: static;
-        margin: 2rem 8rem 0 0;
-    }
+    
     .header_contact{
         justify-content: flex-end;
+    }
+    .header_contact img{
+        position: static;
+        margin: 2rem 28rem 0 0;
     }
     .header_contact h1{
         width: 28rem;
         height: 5rem;
         align-self: center;
         font-size: 64px;
-        margin-right: 4rem;
+        margin-right: 8rem;
     }
     
     .main_contact{
        
         flex-direction: row;
-        justify-content: space-around;
+        justify-content: center;
+        gap: 10rem;
     }
 
     .main_contact h1{
-        width: 25rem;
-        margin: 5rem 0 0 10rem;
+        width: 28rem;
+        margin: 5rem 0 0 0;
+        font-size: 64px;
     }
     .main_contact form{
-        margin: 5rem 10rem 0 0;
+        margin: 5rem 0 0 0;
+    }
+    label{
+        margin: 1rem 0 .4rem 0;
+    }
+    form button{
+        width: 10rem;
+        height: 3rem;
+        font-size: .8rem;
+        transition: background-color 1s, color 0.3s;
+    }
+
+    form button:hover{
+        background-color: #5f5f5f;
+        color: rgb(255, 255, 255);
     }
     .footer_contact{
-        overflow: initial;
+        overflow: hidden;
        
         background-color: #777574;
-        height: 60rem;
+        height: 80rem;
+    }
+    .footer_contact article{
+        flex-direction: row;
+        justify-content: flex-start;
+        height: 100%;
+       
     }
     .footer_contact img[src="img/map.png"]{
-        object-fit: fill;
-        position: absolute;
-        width: 1920px;
-        
+       display: block;
+        width: 100%;
         z-index: 0;
+    }
+    .footer_contact img[src="img/map-mobile.png"]{
+        display: none;
     }
     .visit-us{
         display: flex;
         flex-direction: column;
+        position: relative;
+        top: -33rem;
+        height: 220px;
+        left: 32rem;
+        
     }
-    .arrow-icon_contact{
+    .wrapper_footer_img img[src="img/map.png"]{
+        height: 780px;
+        position: absolute;
+        z-index: 0;
+    }
+    .location{
+        width: 72px;
+        height: 114px;
+        padding-top: 0px;
+        position: absolute;
+        z-index: 1;
+        top: 25rem;
+        left: 58rem;
+    }
+
+    .arrow-icon_mobile_contact{
         display: none;
     }
 }
