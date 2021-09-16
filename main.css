@@ -61,7 +61,6 @@ p, nav a{
     margin-top: 1rem;
 }
 
-
 .covered img{
     margin: 4rem 0 0 1rem;
     width: 90%;
@@ -118,7 +117,6 @@ nav{
 }
 
 nav a{
-    /* margin: 2rem 8rem; */
     margin: auto;
     text-decoration: none;
     font-size: .9rem;
@@ -129,8 +127,7 @@ nav a{
 
 nav p{
     height: 3rem;
-    display: flex;
-    
+    display: flex; 
 }
 
 .main_home section:first-of-type button{
@@ -171,7 +168,6 @@ nav p{
 }
 .info-card:last-of-type{
     margin-bottom: 5rem;
-
 }
 
 .info-card aside{
@@ -191,22 +187,15 @@ nav p{
 }
 .picture-background_child{
     background-color: #c7ddea;
-   
-
 }
 
 .picture-background_adult{
     background-color: #fab131;
-    
-
 }
 
 .picture-background_old{
     background-color: #f17949;
-  
-
 }
-
 
 .info-card p{
     font-size: 0.8rem;
@@ -300,9 +289,6 @@ nav p{
     margin: 0rem 2rem 2rem 2rem;
 }
 
-
-
-
 .wrapper section .instruction-steps:nth-child(5){
     background-color: #f17949;
 }
@@ -321,9 +307,9 @@ nav p{
 }
 
 .arrow-icon_mobile{
-    position: relative;
-    left: 300px;
-    bottom: 25px;
+    position: fixed;
+    left: 18.75rem;
+    bottom: 9rem; 
     width: 60px;
     height: 60px;
     background-color: #ace0f3;
@@ -341,6 +327,10 @@ nav p{
     justify-content: flex-start;
     height: 20rem;
     position: relative;
+
+    background-image: url(img/man-baby.png);
+    background-repeat: no-repeat;
+    background-position: 90%;
 }
 
 .header_contact h1{
@@ -349,16 +339,14 @@ nav p{
     align-items: center;
     font-size: 42px;
     font-weight: bold;
-    margin: 4rem 0 0 2rem;
+    margin: 4rem 0 0 1rem;
 }
-.header_contact img{
-    position: absolute;
-    left: 9rem;
-}
+
 .main_contact{
     background-color: #a9a19e;
     display: flex;
     flex-direction: column;
+    z-index: 1;
 }
 .main_contact h1{
     color: white;
@@ -407,17 +395,17 @@ form button{
 
     min-width: 375px;
     height: 30rem;
-    overflow: hidden;
     padding: 0;
 }
 
 .wrapper_footer_img{
+    overflow: hidden;
     position: relative;
 }
 
 .footer_contact img[src="img/map-mobile.png"]{
     object-fit: cover;
-    position: absolute;
+    position: relative;
     width: 375px;
     height: 407px;
     z-index: -1;
@@ -431,12 +419,19 @@ form button{
     width: 320px;
     height: 180px;
     color: white;
-    position: absolute;
-    top: 63rem;
-    z-index: 3;
-    
+    position: relative;
+    top: -40rem;
+    z-index: 5;
 }
 
+.visit-us h1{
+    font-size: 38px;
+    margin: 1rem 0 0 1rem; 
+}
+
+.visit-us p{
+    margin: 0 0 0 1rem;
+}
 .wrapper_footer_img{
     height: 407px;
 }
@@ -444,24 +439,14 @@ form button{
 .wrapper_footer_img :not(img[src="img/map.png"]):not(img[src="img/map-mobile.png"]){
     display: flex;
    margin: auto;
-   
-  
 }
 .location{
-    padding-top: 204px;
+    position: relative;
+    top: -13rem;
     height:59px; 
     width:37px;
 }
 
-.visit-us h1{
-    font-size: 38px;
-    margin: 1rem 0 0 1rem;
-    
-}
-
-.visit-us p{
-    margin: 0 0 0 1rem;
-}
 
 .footer_contact article{
     display: flex;
@@ -474,17 +459,14 @@ form button{
 .arrow-icon_mobile_contact{
     position: relative;
     left: 265px;
-    bottom: 25px;
+    bottom: 25px; 
     width: 60px;
     height: 60px;
     background-color: #ace0f3;
     border-radius: 50%;
 }
 
-
-/*  */
-/*  */
-/* Skriver media query över till exempel grid eller flex */
+/* Media query */
 
 @media screen and (min-width: 1200px) {
     body{
@@ -594,8 +576,8 @@ form button{
         flex-wrap: wrap;
         align-items: flex-end;
         margin: 8rem 0 0 25rem;
-        
     }
+
     .info-section h1{
         width: 32rem;
         height: 20rem;
@@ -656,16 +638,13 @@ form button{
     .info-card aside{
         width: 16.25rem;
         height: 10.6rem;
-        position: absolute;
+        position: relative;
         top: -2rem;
     }
     .info-card h3{
         margin: 0;
     }
 
-    .info-card > aside img[src="img/adult.png"]{
-        
-    }
     .info-card > aside img[src="img/old.png"]{
         margin-top: 23px;
     }
@@ -759,18 +738,16 @@ form button{
     }
     
     .header_contact{
-        justify-content: flex-end;
+        justify-content: center;
+        background-position: 80%;
     }
-    .header_contact img{
-        position: static;
-        margin: 2rem 28rem 0 0;
-    }
+    
     .header_contact h1{
         width: 28rem;
         height: 5rem;
         align-self: center;
         font-size: 64px;
-        margin-right: 8rem;
+        
     }
     
     .main_contact{
@@ -804,7 +781,6 @@ form button{
     }
     .footer_contact{
         overflow: hidden;
-       
         background-color: #777574;
         height: 80rem;
     }
@@ -826,24 +802,23 @@ form button{
         display: flex;
         flex-direction: column;
         position: relative;
-        top: -33rem;
+        top: -50rem;
         height: 220px;
-        left: 32rem;
+        left: 10rem;
         
     }
     .wrapper_footer_img img[src="img/map.png"]{
         height: 780px;
-        position: absolute;
+        position: relative;
         z-index: 0;
     }
     .location{
         width: 72px;
         height: 114px;
         padding-top: 0px;
-        position: absolute;
+        position: relative;
         z-index: 1;
-        top: 25rem;
-        left: 58rem;
+        bottom: 100%;
     }
 
     .arrow-icon_mobile_contact{
