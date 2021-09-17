@@ -420,7 +420,8 @@ form button{
     height: 180px;
     color: white;
     position: relative;
-    top: -40rem;
+    top: -32rem;
+    left: 2rem;
     z-index: 5;
 }
 
@@ -447,14 +448,6 @@ form button{
     width:37px;
 }
 
-
-.footer_contact article{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 30rem;
-}
 
 .arrow-icon_mobile_contact{
     position: relative;
@@ -784,41 +777,38 @@ form button{
         background-color: #777574;
         height: 80rem;
     }
-    .footer_contact article{
-        flex-direction: row;
-        justify-content: flex-start;
-        height: 100%;
-       
-    }
+    
     .footer_contact img[src="img/map.png"]{
        display: block;
         width: 100%;
+        height: 780px;
+        position: relative;
+        object-fit: contain;
         z-index: 0;
     }
     .footer_contact img[src="img/map-mobile.png"]{
         display: none;
     }
+    .wrapper_footer_img{
+        height: 780px;
+        overflow: initial;
+    }
     .visit-us{
         display: flex;
         flex-direction: column;
         position: relative;
-        top: -50rem;
+        top: -40%;
         height: 220px;
-        left: 10rem;
-        
+        left: 23%; 
     }
-    .wrapper_footer_img img[src="img/map.png"]{
-        height: 780px;
-        position: relative;
-        z-index: 0;
-    }
+   
     .location{
         width: 72px;
         height: 114px;
         padding-top: 0px;
         position: relative;
         z-index: 1;
-        bottom: 100%;
+        top: -25rem;
     }
 
     .arrow-icon_mobile_contact{
